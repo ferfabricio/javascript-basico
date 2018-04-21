@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio</title>
+</head>
+<body>
+    <input type="text" id="valor1" />
+    <input type="text" id="valor2" />
+    <button onclick="mostrar(this)">Avaliar</button>
+    <div>Resultado: <span id="resultado"></span></div>
+    <script type="text/javascript">
+        function avalia(valor1, valor2) {
+          if (valor1 > valor2) {
+            return 'É maior!'
+          }
+          return 'É menor!'
+        }
+
+        function mostrar(element) {
+          console.log(element)
+          let valor1 = document.getElementById('valor1').value
+          let valor2 = document.getElementById('valor2').value
+          document.getElementById('resultado').innerText = avalia(valor1, valor2)
+        }
+    </script>
+</body>
+</html>
